@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pangkat dan Golongan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 style="text-align: center;">Pangkat dan Golongan</h1>
+    <p style="text-align:center">Mohon lengkapi data berikut untuk verifikasi data pangkat dan golongan anda</p>
+    <form action="sukses.html" enctype="multipart/form-data" method="post">
+    <fieldset>
+    <legend style="font-weight: bold;">Data Tenaga Kependidikan</legend>
+
+    <label>Nama Lengkap</label><br>
+    <input type="text" name="nama_tendik" required><br><br>
+
+    <label>Pangkat Fungsional</label><br>
+    <select name="pangkat_dosen" required>
+        <option value="">-- Pilih Pangkat --</option>
+        <option>Asisten Ahli</option>
+        <option>Lektor</option>
+        <option>Lektor Kepala</option>
+        <option>Guru Besar</option>
+    </select><br><br>
+
+     <label>Golongan</label><br>
+    <select name="golongan_dosen" required>
+        <option value="">-- Pilih Golongan --</option>
+        <option>III/a</option>
+        <option>III/b</option>
+        <option>III/c</option>
+        <option>III/d</option>
+        <option>IV/a</option>
+        <option>IV/b</option>
+        <option>IV/c</option>
+        <option>IV/d</option>
+        <option>IV/e</option>
+    </select><br><br>
+
+    <label>TMT</label><br>
+
+    <input type="date" name="tmt" required><br><br>
+
+    <label>Upload SK (PDF)</label><br>
+    <p>Maukkan file dalam format PDF, DOC, atau DOCX!!</p>
+    <input type="file" name="berkas_sk" accept=".pdf, .doc, .docx" required><br><br>
+
+    <input type="reset" value="Batal">
+    <input type="submit" value="Unggah"> <br><br>
+
+    <button onclick="location.href='formAwal.html'">Kembali</button>
+    
+    </fieldset>
+    </form>
+</body>
+</html>

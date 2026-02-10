@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Login Operator</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<header>
+    <h1>SISTEM KEPEGAWAIAN</h1> 
+    <p>Silakan masukkan username dan password</p>
+</header>
+
+<main>
+    <section id="loginForm">
+        <h2>Login Operator</h2>
+
+        <form action="dashboard.html" method="get">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <input type="submit" value="LOGIN">
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Sistem Kepegawaian</p>
+</footer>
+
+<script>
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // mencegah submit langsung
+
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // akun operator
+        if (username === "admin" && password === "12345") {
+            alert("Login berhasil");
+            location.replace("../dashboard.html");
+        } else {
+            alert("Username atau password salah");
+        }
+    });
+</script>
+
+</body>
+</html>
