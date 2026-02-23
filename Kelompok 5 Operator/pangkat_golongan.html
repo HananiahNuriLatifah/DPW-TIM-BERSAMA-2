@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Pangkat & Golongan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+        .container {
+            width: 85%;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background: #f0f0f0;
+        }
+        a.button {
+            padding: 5px 10px;
+            text-decoration: none;
+            border: 1px solid #666;
+            border-radius: 4px;
+            margin: 0 2px;
+        }
+        .top-link {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h3>Data Pangkat / Golongan</h3>
+
+    <a href="pangkat_golongan_form.html" class="top-link">➕ Tambah Pangkat</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Pangkat / Golongan</th>
+                <th>TMT</th>
+                <th>Berkas</th>
+                <th>Status</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>dosen1</td>
+                <td>Penata Muda / IIIa</td>
+                <td>01-01-2023</td>
+                <td><a href="#">Lihat SK</a></td>
+                <td>Menunggu</td>
+                <td>
+                    <a href="pangkat_golongan_form.html" class="button">Edit</a>
+                    <a href="#" class="button">Hapus</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>dosen2</td>
+                <td>Penata / IIIc</td>
+                <td>01-03-2022</td>
+                <td><a href="#">Lihat SK</a></td>
+                <td>Disetujui</td>
+                <td>
+                    <a href="pangkat_golongan_form.html" class="button">Edit</a>
+                    <a href="#" class="button">Hapus</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
