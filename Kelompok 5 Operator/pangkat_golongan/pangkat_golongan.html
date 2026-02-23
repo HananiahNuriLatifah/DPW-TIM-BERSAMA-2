@@ -3,51 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Data Pangkat & Golongan</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
-        }
-        .container {
-            width: 85%;
-            margin: 50px auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background: #f0f0f0;
-        }
-        a.button {
-            padding: 5px 10px;
-            text-decoration: none;
-            border: 1px solid #666;
-            border-radius: 4px;
-            margin: 0 2px;
-        }
-        .top-link {
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/pangkat_golongan.css">
+
+       
 </head>
 <body>
 
 <div class="container">
-    <h3>Data Pangkat / Golongan</h3>
+    <h3>Data Pangkat dan Golongan</h3>
 
-    <a href="formAwal.html" class="top-link">➕ Tambah Pangkat</a>
-
+    <a href="FormPangkatGolongan.html" class="btn-tambah"> + Tambah Pangkat</a>
     <table>
         <thead>
             <tr>
@@ -67,7 +32,7 @@
                 <td><a href="#">Lihat SK</a></td>
                 <td>Menunggu</td>
                 <td>
-                    <a href="formAwal.html" class="button">Edit</a>
+                    <a href="FormPangkatGolongan.html" class="button">Edit</a>
                     <a href="#" class="button">Hapus</a>
                 </td>
             </tr>
@@ -79,13 +44,14 @@
                 <td><a href="#">Lihat SK</a></td>
                 <td>Disetujui</td>
                 <td>
-                    <a href="formAwal.html" class="button">Edit</a>
+                    <a href="UpdatePangkatGolongan.html" class="button">Edit</a>
                     <a href="#" class="button">Hapus</a>
                 </td>
             </tr>
         </tbody>
     </table>
 </div>
-
+<footer>
+  <p>&copy; 2026 Universitas Riau</p></footer>
 </body>
 </html>
