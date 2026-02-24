@@ -1,0 +1,95 @@
+/* Reset dasar */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 40px;
+}
+
+/* Judul */
+h2 {
+    text-align: center;
+    color: #9b0000;
+    margin-bottom: 30px;
+}
+
+/* Form container */
+form {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Fieldset */
+fieldset {
+    border: 2px solid #9b0000;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Legend */
+legend {
+    color: #9b0000;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+/* Label */
+label {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Input & Select */
+input[type="text"],
+input[type="date"],
+select,
+input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Fokus */
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #9b0000;
+    box-shadow: 0 0 5px rgba(155, 0, 0, 0.4);
+}
+
+/* Button */
+button {
+    background-color: #9b0000;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Hover */
+button:hover {
+    background-color: #750000;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    form {
+        padding: 15px;
+    }
+}
