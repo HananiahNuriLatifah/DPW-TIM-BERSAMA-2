@@ -3,43 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <title>Verifikasi Jabatan Fungsional</title>
-  <link rel="stylesheet" href="../css/jabfung.css">
+  <link rel="stylesheet" href="../css/verifikasi.css">
 </head>
+
 <body>
 
-<header>
-  <h2>Verifikasi Jabatan Fungsional</h2>
-</header>
+  <!-- HEADER -->
+  <header>
+    <h2>Verifikasi Jabatan Fungsional</h2>
+  </header>
 
-<div class="container">
-  <table>
-    <thead>
-      <tr>
-        <th>Nama</th>
-        <th>Jabatan</th>
-        <th>TMT</th>
-        <th>SK</th>
-        <th>Aksi</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Khairul Umam Syaliman</td>
-        <td>Dosen</td>
-        <td>01-06-2024</td>
-        <td>
-          <a href="sk_khairul-umam-syaliman.pdf" target="_blank">
-            sk_khairul-umam-syaliman.pdf
-          </a>
-        </td>
-        <td>
-          <button class="btn-verif">Verifikasi</button>
-          <button class="btn-delete">Delete</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+  <!-- TABEL -->
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>Nama</th>
+          <th>Jabatan</th>
+          <th>TMT</th>
+          <th>SK</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Arya Brawijaya</td>
+          <td>Lektor</td>
+          <td>01-06-2024</td>
+          <td>
+            <a href="../pdf/sk_arya-brawijaya.pdf" class="pdf-link">
+              sk_arya-brawijaya.pdf
+            </a>
+          </td>
+          <td>
+            <button class="btn-verif">Verifikasi</button>
+            <button class="btn-delete">Delete</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Rani Reswara</td>
+          <td>Lektor Kepala</td>
+          <td>12-06-2025</td>
+          <td>
+            <a href="../pdf/sk_rani-reswara.pdf" class="pdf-link">
+              sk_rani-reswara.pdf
+            </a>
+          </td>
+          <td>
+            <button class="btn-verif">Verifikasi</button>
+            <button class="btn-delete">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- MODAL KONFIRMASI -->
+  <div id="modalConfirm" class="modal">
+    <div class="modal-content">
+      <p id="modalMessage"></p>
+
+      <div class="modal-actions">
+        <button id="confirmYes" class="btn-primary">Ya</button>
+        <button id="confirmNo" class="btn-secondary">Batal</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL PDF -->
+  <div id="pdfModal" class="modal">
+    <div class="modal-content pdf-container">
+      <button id="closePdf" class="btn-close">&times;</button>
+      <iframe id="pdfViewer"></iframe>
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="../js/verifikasi.js"></script>
 
 </body>
 </html>
