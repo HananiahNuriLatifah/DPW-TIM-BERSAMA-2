@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Data Diri</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Form Pengisian Data Diri</h1>
+            <p>Silakan lengkapi data di bawah ini dengan benar.</p>
+        </header>
+        <main>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nip">NIP</label>
+                    <input type="text" id="nip" name="nip" placeholder="Masukkan NIP" >
+                </div>
+
+                <div class="form-group">
+                    <label for="nidn">NIDN</label>
+                    <input type="text" id="nidn" name="nidn" placeholder="Masukkan NIDN">
+                </div>
+
+                <div class="form-group">
+                    <label for="tanggal-lahir">Tanggal Lahir</label>
+                    <input type="date" id="tanggal-lahir" name="tanggal_lahir" >
+                </div>
+
+                <div class="form-group">
+                    <label for="nomor-hp">Nomor HP</label>
+                    <input type="tel" id="nomor-hp" name="nomor_hp" placeholder="0812xxxx" >
+                </div>
+
+                <div class="form-group">
+                    <label for="nomor-hp-darurat">Nomor HP Darurat</label>
+                    <input type="tel" id="nomor-hp-darurat" name="nomor_hp_darurat" placeholder="0812xxxx">
+                </div>
+
+                <a href="table-read-datadiri.html"><button type="submit" class="btn-kembali">Kembali</button></a>
+                <button type="b" class="btn-submit">Simpan Data</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
