@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  // ===============================
   // MODAL KONFIRMASI
-  // ===============================
   const modal = document.getElementById("modalConfirm");
   const modalMessage = document.getElementById("modalMessage");
   const confirmYes = document.getElementById("confirmYes");
@@ -24,9 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     actionType = null;
   }
 
-  // ===============================
   // BUTTON VERIFIKASI
-  // ===============================
   document.querySelectorAll(".btn-verif").forEach((button) => {
     button.addEventListener("click", function () {
       const row = this.closest("tr");
@@ -40,9 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // ===============================
   // BUTTON DELETE
-  // ===============================
   document.querySelectorAll(".btn-delete").forEach((button) => {
     button.addEventListener("click", function () {
       const row = this.closest("tr");
@@ -56,14 +50,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // ===============================
   // CONFIRM YES
-  // ===============================
   confirmYes.addEventListener("click", function () {
 
     if (!selectedRow) return;
 
-    // ===== VERIFIKASI =====
+    // VERIFIKASI
     if (actionType === "verif") {
 
       if (selectedRow.getAttribute("data-status") === "verified") {
@@ -93,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    // ===== DELETE =====
+    // DELETE
     if (actionType === "delete") {
 
       if (selectedRow.getAttribute("data-status") === "verified") {
@@ -107,16 +99,11 @@ document.addEventListener("DOMContentLoaded", function () {
     closeModal();
   });
 
-  // ===============================
   // CONFIRM NO
-  // ===============================
   confirmNo.addEventListener("click", closeModal);
 
 
-
-  // ===============================
   // PREVIEW PDF
-  // ===============================
   const pdfLinks = document.querySelectorAll(".pdf-link");
   const pdfModal = document.getElementById("pdfModal");
   const pdfViewer = document.getElementById("pdfViewer");
