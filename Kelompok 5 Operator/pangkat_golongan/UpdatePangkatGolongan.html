@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit Data</title>
+    <link rel="stylesheet" href="update.css">
 </head>
 <body>
 
+<form action="sukses.html" method="get" onsubmit="return validasiEdit()">
 <h3> Edit Pangkat</h3>
-
-<form action="sukses_update.html" method="get">
-
     Nama Lengkap:<br>
     <input type="text" value="dosen1"><br><br>
 
@@ -33,4 +32,35 @@
 </form>
 
 </body>
+<script>
+function validasiEdit() {
+    const nama = document.querySelector("input[type='text']").value.trim();
+    const pangkat = document.querySelectorAll("input[type='text']")[1].value.trim();
+    const tmt = document.querySelector("input[type='date']").value;
+    const status = document.querySelector("select").value;
+
+    if (nama === "") {
+        alert("Nama lengkap tidak boleh kosong!");
+        return false;
+    }
+
+    if (pangkat === "") {
+        alert("Pangkat / Golongan tidak boleh kosong!");
+        return false;
+    }
+
+    if (tmt === "") {
+        alert("TMT harus diisi!");
+        return false;
+    }
+
+    let konfirmasi = confirm("Apakah Anda yakin ingin mengupdate data?");
+    if (!konfirmasi) {
+        return false;
+    }
+
+    alert("Data berhasil diperbarui!");
+    return true; // lanjut ke sukses.html
+}
+</script>
 </html>
