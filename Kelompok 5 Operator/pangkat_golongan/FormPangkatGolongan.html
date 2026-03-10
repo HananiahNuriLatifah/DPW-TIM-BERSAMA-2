@@ -3,31 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Form Pangkat dan Golongan</title>
-    <link rel="stylesheet" href="../css/Form.css">
+    <link rel="stylesheet" href="Form.css">
 </head>
+
 <body>
+<h2> Form Pangkat dan Golongan</h2>
 
-<h2>Form Pangkat dan Golongan</h2>
-
-<form action="pangkat_golongan.html" method="get" enctype="multipart/form-data">
+<form onsubmit="return validasiForm()">
 
     <label>Status Pegawai:</label><br>
     <select id="status" onchange="tampilkanForm()" required>
         <option value="">-- Pilih Status --</option>
         <option value="dosen">Dosen</option>
-        <option value="tendik">Tendik</option>
+        <option value="tendik">Tendik</option> 
     </select><br><br>
-
-    <label>Nama Lengkap:</label><br>
-    <input type="text" name="nama" id="nama" required><br><br>
-
-   
+    
     <div id="formDosen" style="display:none;">
         <fieldset>
             <legend><strong>Data Dosen</strong></legend>
 
+            <label>Nama Lengkap:</label><br>
+            <input type="text" id="nama_dosen" name="nama_dosen"><br>
+            <small id="error_nama_dosen" style="color:red;"></small><br><br>
+
             <label>NIP/NIDN:</label><br>
-            <input type="text" name="nip_dosen"><br><br>
+            <input type="text" id="nip_dosen" name="nip_dosen"><br>
+            <small id="error_nip_dosen" style="color:red;"></small><br><br>
 
             <label>Pangkat Fungsional:</label><br>
             <select name="pangkat_dosen">
@@ -52,7 +53,8 @@
             <input type="date" name="tmt_dosen"><br><br>
 
             <label>Upload SK:</label><br>
-            <input type="file" name="sk_dosen" accept=".pdf,.doc,.docx"><br><br>
+            <input type="file" id="sk_dosen" name="sk_dosen" accept=".pdf,.doc,.docx">
+            <small id="error_file_dosen" style="color:red;"></small>
         </fieldset>
     </div>
 
@@ -60,9 +62,14 @@
         <fieldset>
             <legend><strong>Data Tendik</strong></legend>
 
-            <label>NIP:</label><br>
-            <input type="text" name="nip_tendik"><br><br>
+            <label>Nama Lengkap:</label><br>
+            <input type="text" id="nama_tendik" name="nama_tendik"><br>
+              <small id="error_nama_tendik" style="color:red;"></small><br><br>
+          
 
+            <label>NIP:</label><br>
+            <input type="text" id="nip_tendik" name="nip_tendik"><br>
+            <small id="error_nip_tendik" style="color:red;"></small><br><br>
             <label>Golongan:</label><br>
             <select name="golongan_tendik">
                 <option value="">-- Pilih --</option>
@@ -77,37 +84,19 @@
             <input type="date" name="tmt_tendik"><br><br>
 
             <label>Upload SK:</label><br>
-            <input type="file" name="sk_tendik" accept=".pdf,.doc,.docx"><br><br>
+            <input type="file" id="sk_tendik" name="sk_tendik" accept=".pdf,.doc,.docx">
+            <small id="error_file_tendik" style="color:red;"></small>
         </fieldset>
     </div>
 
     <br>
-    <button type="submit">Simpan</button>
-   <a href="pangkat_golongan.html">
-    <button type="button">Batal</button></a>
+    <button type="submit">Simpan</button> 
+    <button type="reset" onclick="return konfirmasiReset()">Batal</button>
+    <button type="button" onclick="kembaliHalaman()">Kembali</button>
 
 </form>
 
-<script>
-function tampilkanForm() {
-    var status = document.getElementById("status").value;
-    var dosen = document.getElementById("formDosen");
-    var tendik = document.getElementById("formTendik");
-
-    if (status === "dosen") {
-        dosen.style.display = "block";
-        tendik.style.display = "none";
-    } 
-    else if (status === "tendik") {
-        dosen.style.display = "none";
-        tendik.style.display = "block";
-    } 
-    else {
-        dosen.style.display = "none";
-        tendik.style.display = "none";
-    }
-}
-</script>
+<script src="FormPangkatGolongan.js"></script>
 
 </body>
 </html>
